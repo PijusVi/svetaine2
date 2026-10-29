@@ -1,0 +1,513 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #292929;
+  line-height: 1.7;
+}
+
+/* Navigacijos juosta */
+.virsus {
+  min-height: 100px;
+  background-color: white;
+  padding: 20px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.logo {
+  color: #111;
+  text-decoration: none;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 6px;
+  white-space: nowrap;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #000000;
+}
+
+/* Pagrindinis vaizdas */
+.hero {
+  min-height: 100px;
+  margin: 0;
+  padding: 65px 7%;
+  display: flex;
+  align-items: center;
+  background: rgb(196, 196, 196);
+  color: white;
+  border-radius: 0;
+}
+
+/* Pagrindinis turinys ir aside */
+
+
+.mokslininkai-sarasas {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background-color: white;
+  padding: 25px 35px;
+  border: 1px solid #e8e2d8;
+  border-radius: 4px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.mokslininkai-sarasas section {
+  min-width: 0;
+  margin: 0;
+  padding: 30px 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #e8e2d8;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+.mokslininkai-sarasas section:last-child {
+  border-bottom: none;
+}
+
+.mokslininkai-sarasas section:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+
+.mokslininkai-sarasas section .mokslininkai-nuotrauka {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin: 0 0 22px;
+  border-bottom: 3px solid #b9975b;
+}
+
+/* MATEMATIKOS RŪŠIŲ IŠDĖSTYMAS */
+
+.mokslininkai-turinys {
+  max-width: 1450px;
+  margin: 45px auto 70px;
+  padding: 0 35px;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(270px, 0.8fr);
+  align-items: start;
+  gap: 30px;
+}
+
+.mokslininkai-sarasas section {
+  min-width: 0;
+  margin: 0;
+  padding: 35px;
+  background-color: #ffffff;
+  border: 1px solid #e8e2d8;
+  border-left: 4px solid #b9975b;
+  border-radius: 4px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.mokslininkai-sarasas section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.mokslininkai-sarasas section h2 {
+  position: relative;
+  margin: 0 0 22px;
+  padding-bottom: 15px;
+  color: #171717;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.mokslininkai-sarasas section h2::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #b9975b;
+}
+
+.mokslininkai-sarasas section p {
+  margin: 0;
+  color: #55514b;
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: left;
+}
+
+
+/* ŠONINĖ JUOSTA */
+.mokslininkai-aside {
+  position: sticky;
+  top: 25px;
+  min-width: 0;
+  padding: 30px 25px;
+  background-color: #191919;
+  color: #f8f5ef;
+  border: 1px solid #3b3327;
+  border-top: 4px solid #b9975b;
+  border-radius: 4px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.mokslininkai-aside .aside-etikete {
+  margin-bottom: 18px;
+  color: #c8a96e;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.mokslininkai-aside h2 {
+  margin: 0 0 18px;
+  color: #ffffff;
+  font-size: 27px;
+  line-height: 1.35;
+  font-weight: normal;
+}
+
+.mokslininkai-aside p {
+  color: #c9c5bd;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.aside-skiltis {
+  margin-top: 30px;
+  padding-top: 22px;
+  border-top: 1px solid #403a30;
+}
+
+.mokslininkai-aside h3 {
+  margin: 0 0 15px;
+  color: #d4b77c;
+  font-size: 16px;
+}
+
+.aside-skiltis ul {
+  margin: 0;
+  padding-left: 19px;
+  color: #d5d1ca;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.aside-skiltis li {
+  margin-bottom: 12px;
+  padding-left: 3px;
+}
+
+.aside-skiltis li::marker {
+  color: #b9975b;
+}
+
+/* Nuorodos šoninėje juostoje */
+.aside-nuorodos {
+  margin-top: 30px;
+  padding-top: 22px;
+  border-top: 1px solid #403a30;
+}
+
+.aside-nuorodos a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid #35312b;
+  color: #f1eee8;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.aside-nuorodos a span {
+  color: #c8a96e;
+  font-size: 18px;
+}
+
+.aside-nuorodos a:hover {
+  color: #d4b77c;
+}
+
+.mokslininkai-aside .aside-pabaiga {
+  margin: 28px 0 0;
+  color: #b9975b;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+/* MAŽESNI EKRANAI */
+@media (max-width: 950px) {
+  .rusys-turinys {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 800px;
+    gap: 10px;
+    padding: 0 20px;
+  }
+
+  .rusys-aside {
+    position: static;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .rusys-turinys {
+    margin: 25px auto 45px;
+    padding: 0 15px;
+  }
+
+  .rusys-turinys > section {
+    padding: 25px 20px;
+    margin-bottom: 20px;
+  }
+
+  .rusys-turinys > section h2 {
+    font-size: 25px;
+  }
+
+  .rusys-turinys > section p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .rusys-aside {
+    padding: 25px 20px;
+  }
+
+  .rusys-aside h2 {
+    font-size: 24px;
+  }
+}
+
+/* Puslapio apačia */
+/* Footer */
+.puslapio-apačia {
+  background-color: #1b1b1b;
+  color: #242424;
+  padding: 65px 7% 25px;
+  margin-top: 60px;
+  font-family: Arial, sans-serif;
+}
+
+/* Viršutinė footerio dalis */
+.footer-turinys {
+  display: grid;
+  grid-template-columns: 2fr 0.9fr 1.1fr 1.5fr;
+  gap: 45px;
+  max-width: 1500px;
+  margin: 0 auto 55px;
+}
+
+/* Logo */
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 35px;
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 6px;
+}
+
+/* Naujienlaiškis */
+.footer-naujienlaiskis p {
+  max-width: 390px;
+  margin-bottom: 25px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: white;
+}
+
+.footer-forma {
+  display: flex;
+  gap: 12px;
+  max-width: 450px;
+}
+
+.footer-forma input {
+  min-width: 0;
+  flex: 1;
+  padding: 17px 15px;
+  border: 1px solid #c9c4c0;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 14px;
+}
+
+.footer-forma button {
+  width: 65px;
+  border: none;
+  border-radius: 30px;
+  background-color: white;
+  color: #111;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-forma button:hover {
+  background-color: #e5e7eb;
+}
+
+/* Footerio nuorodų skiltys */
+.footer-nuorodos,
+.footer-apie {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-nuorodos h3,
+.footer-apie h3 {
+  margin: 0 0 22px;
+  font-size: 20px;
+  color: #f7f3f3;
+}
+
+.footer-nuorodos a {
+  margin-bottom: 12px;
+  color: #f5ede9;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.footer-nuorodos a:hover {
+  color: #fac281;
+}
+
+.footer-apie p {
+  margin-top: 0;
+  margin-bottom: 14px;
+  color: white;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.footer-apie a {
+  display: block;
+  margin-top: 5px;
+  color: #f5ede9;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 0.3s;
+}
+
+.footer-apie a:hover {
+  color: #fac281;
+}
+
+/* Apatinė dalis */
+.footer-apatine {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 35px;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.footer-social img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  color: white;
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.footer-social a:hover {
+  transform: translateY(-3px);
+}
+
+.footer-apatine p {
+  margin: 0;
+  color: #77716e;
+  font-size: 13px;
+}
+
+/* TELEFONAMS */
+
+@media (max-width: 700px) {
+  header h1 {
+    font-size: 32px;
+  }
+
+  section {
+    margin: 20px 15px;
+    padding: 25px 20px;
+  }
+
+  section h2 {
+    font-size: 25px;
+  }
+
+  section p {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  nav a {
+    display: block;
+    max-width: 250px;
+    margin: 8px auto;
+  }
+}
