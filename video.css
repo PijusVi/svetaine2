@@ -55,9 +55,9 @@ nav a:hover {
 
 /* Pagrindinis vaizdas */
 .hero {
-  min-height: 400px;
+  min-height: 100px;
   margin: 0;
-  padding: 65px 7%;
+  padding: 10px 7%;
   display: flex;
   align-items: center;
   background: linear-gradient(120deg, #000000, #332300);
@@ -77,7 +77,7 @@ nav a:hover {
 
 .hero h1 {
   font-size: clamp(34px, 4vw, 52px);
-  line-height: 1.2;
+  line-height: 1;
   font-weight: normal;
   margin: 15px 0;
 }
@@ -85,7 +85,7 @@ nav a:hover {
 .hero-tekstas > p:not(.etikete) {
   font-size: 18px;
   max-width: 600px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .mygtukas {
@@ -95,7 +95,7 @@ nav a:hover {
   color: #000000;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 4px;
+  border-radius: 6px;
   transition: 0.3s;
 }
 
@@ -251,24 +251,12 @@ nav a:hover {
   color: #171717;
 }
 
-/* Planšetės ir mažesni ekranai */
-@media (max-width: 950px) {
-  .video-turinys {
-    grid-template-columns: minmax(0, 1fr);
-    max-width: 800px;
-    gap: 30px;
-    padding: 0 20px;
-  }
-
-  .video-turinys aside {
-    position: static;
-  }
-}
 /* Puslapio apačia */
+
 /* Footer */
 .puslapio-apačia {
   background-color: #1b1b1b;
-  color: #242424;
+  color: white;
   padding: 65px 7% 25px;
   margin-top: 60px;
   font-family: Arial, sans-serif;
@@ -277,7 +265,7 @@ nav a:hover {
 /* Viršutinė footerio dalis */
 .footer-turinys {
   display: grid;
-  grid-template-columns: 2fr 0.9fr 1.1fr 1.5fr;
+  grid-template-columns: 2fr 1fr 1.2fr;
   gap: 45px;
   max-width: 1500px;
   margin: 0 auto 55px;
@@ -428,34 +416,163 @@ nav a:hover {
   font-size: 13px;
 }
 
-/* Mažesni ekranai */
-@media (max-width: 850px) {
+/* Planšetės */
+@media (max-width: 950px) {
   .virsus {
     flex-direction: column;
-    padding: 22px 15px;
+    padding: 20px 5%;
+    gap: 20px;
   }
 
   nav {
-    gap: 12px 20px;
+    gap: 18px;
+  }
+
+  .video-turinys {
+    grid-template-columns: 1fr;
+    max-width: 850px;
+    padding: 0 25px;
+    gap: 25px;
+  }
+
+  .video-turinys aside {
+    position: static;
+  }
+
+  .footer-turinys {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+}
+
+/* Telefonai */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  .virsus {
+    padding: 18px 15px;
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 23px;
+    letter-spacing: 4px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 14px;
   }
 
   .hero {
-    min-height: 350px;
-    padding: 45px 25px;
+    min-height: 300px;
+    padding: 45px 20px;
   }
 
-  .turinys {
-    grid-template-columns: 1fr;
-    margin: 25px auto;
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero-tekstas > p:not(.etikete) {
+    font-size: 16px;
+  }
+
+  .video-turinys {
+    margin: 30px auto 45px;
     padding: 0 15px;
+    gap: 20px;
   }
 
-  .pamoku-blokas,
-  aside {
-    padding: 22px;
+  .pamoku-blokas > h2 {
+    font-size: 27px;
   }
 
-  aside {
-    position: static;
+  .pamoka {
+    padding: 20px 15px;
+  }
+
+  .pamoka h3 {
+    font-size: 22px;
+  }
+
+  .pamoka video {
+    max-height: 300px;
+  }
+
+  .pamoka p {
+    font-size: 14px;
+  }
+
+  .video-turinys aside {
+    padding: 22px 18px;
+  }
+
+  .video-turinys aside h2 {
+    font-size: 23px;
+  }
+
+  .footer-turinys {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .puslapio-apačia {
+    padding: 45px 20px 20px;
+  }
+
+  .footer-logo {
+    font-size: 24px;
+    letter-spacing: 4px;
+  }
+
+  .footer-forma {
+    width: 100%;
+  }
+
+  .footer-forma button {
+    width: 55px;
+    flex-shrink: 0;
+  }
+
+  .footer-apatine {
+    gap: 25px;
+  }
+
+  .footer-social {
+    gap: 20px;
+  }
+}
+
+/* Labai maži telefonai */
+@media (max-width: 350px) {
+  .logo {
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  .pamoka {
+    padding: 15px 12px;
+  }
+
+  .pamoka h3 {
+    font-size: 20px;
+  }
+
+  .video-turinys aside {
+    padding: 18px 14px;
+  }
+
+  .footer-forma {
+    gap: 7px;
   }
 }
